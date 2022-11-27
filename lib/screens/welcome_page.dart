@@ -4,7 +4,7 @@ import 'package:world_cup/constants/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 class WelcomePage extends StatelessWidget {
   
-  static const String routeName = "/";
+  static const String routeName = "/welcome";
   const WelcomePage({super.key});
   
 
@@ -140,8 +140,10 @@ class WelcomePage extends StatelessWidget {
                           
                        ),
                           onPressed: (){
-                           
-                          }, child: Text("تسجيل الدخول", style: GoogleFonts.ibmPlexSans(
+                            Navigator.pushNamed(context, "/login");
+                          },
+                            
+                           child: Text("تسجيل الدخول", style: GoogleFonts.ibmPlexSans(
                           fontSize: 18,
                     color: kBurgundyColor,
                     fontWeight: FontWeight.bold,
