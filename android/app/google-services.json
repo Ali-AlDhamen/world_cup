@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "141000027202",
+    "project_id": "world-cup-5ff09",
+    "storage_bucket": "world-cup-5ff09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141000027202:android:9ca0c2ad91e5042aa791db",
+        "android_client_info": {
+          "package_name": "com.example.world_cup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "141000027202-dagsf63fgd79ddusih7l8ksvqsib7tnc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJXC7ei0dJCcVIpGZp_vN2U-KXYIW42HM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "141000027202-dagsf63fgd79ddusih7l8ksvqsib7tnc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
