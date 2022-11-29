@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:world_cup/constants/colors.dart';
+import 'package:world_cup/widgets/match_item.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -28,120 +29,212 @@ class MainScreen extends StatelessWidget {
  
        
       ),
-      body: Column(
-        
-
-        children: [
+      body: SingleChildScrollView(
+        child: Column(
           
-          Stack(
-            children:[ Container(
-              margin: const EdgeInsets.only(left: 40 , top: 15),
-              height: 165,
-              width: 320,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-                color: kOrangeColor
-              ),
-              child: Column(
-                children: [
-                  
-                  Container(
-                    margin: const EdgeInsets.only(top: 20 , left: 220),
-                    height: 30,
-                    decoration:BoxDecoration(
+      
+          children: [
+            
+            Stack(
+              children:[ Container(
+                margin: const EdgeInsets.only( top: 15),
+                height: 165,
+                width: 320,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  color: kOrangeColor
+                ),
+                child: Column(
+                  children: [
+                    
+                    Container(
+                      margin: const EdgeInsets.only(top: 20 , left: 220),
+                      height: 30,
+                      decoration:BoxDecoration(
+                        
+                        borderRadius: BorderRadius.circular(30),
+                        color: kWhiteColor,
+                      ),
                       
-                      borderRadius: BorderRadius.circular(30),
-                      color: kWhiteColor,
+                      child: const Padding(
+                        padding:  EdgeInsets.all(8.0),
+                        child: Text("فرنسا" , style: TextStyle(
+            
+                          color: kBurgundyColor,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold
+                        ),),
+                      ),
+                    ),
+                    Container(
+                      width: 160,
+                      height: 70,
+                      margin: const EdgeInsets.only(top: 20 , left: 110),
+                child: Text("فرنسا أبطال كأس العالم روسيا 2018" , style: TextStyle(
+                  color: kWhiteColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold
+                ),),
                     ),
                     
-                    child: const Padding(
-                      padding:  EdgeInsets.all(8.0),
-                      child: Text("فرنسا" , style: TextStyle(
-          
-                        color: kBurgundyColor,
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold
-                      ),),
-                    ),
+                   
+                  ],
+                ),
+              ),
+              Positioned(
+                
+                left:-10,
+                child:  Container(
+                    margin: const EdgeInsets.only(left: 2),
+                    width: 196,
+                    height: 200,
+                    child: Image.asset("assets/images/mam.png"),
+                    )
+              )
+              ]
+            ),
+            
+           SizedBox(height: 30,),
+           // scrollable Row
+           SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.fromLTRB(10,0,10,0),
+             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                 Container(
+                  width: 108,
+                  height: 115,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: kWhite20Color
                   ),
-                  Container(
-                    width: 160,
-                    height: 70,
-                    margin: const EdgeInsets.only(top: 20 , left: 110),
-              child: Text("فرنسا أبطال كأس العالم روسيا 2018" , style: TextStyle(
-                color: kWhiteColor,
-                fontSize: 18,
-                fontWeight: FontWeight.bold
-              ),),
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(top: 10),
+                        width: 50,
+                        height: 50,
+                        
+                        child: CircleAvatar(
+                           backgroundImage: AssetImage('assets/images/flag1.jpeg'),
+                      )
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(top: 10),
+                        child: Text("المجموعة A" , style: TextStyle(
+                          color: kWhiteColor,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold
+                        ),),
+                      )
+                    ],
                   ),
                   
-                 
-                ],
+                  ),
+                  SizedBox(width: 30,),
+                   Container(
+                  width: 108,
+                  height: 115,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: kWhite20Color
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(top: 10),
+                        width: 50,
+                        height: 50,
+                        
+                        child: CircleAvatar(
+                           backgroundImage: AssetImage('assets/images/flag2.png'),
+                      )
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(top: 10),
+                        child: Text("المجموعة C" , style: TextStyle(
+                          color: kWhiteColor,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold
+                        ),),
+                      )
+                    ],
+                  ),
+                  ),
+                  SizedBox(width: 30,),
+                   Container(
+                  width: 108,
+                  height: 115,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: kWhite20Color
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(top: 10),
+                        width: 50,
+                        height: 50,
+                        
+                        child: CircleAvatar(
+                           backgroundImage: AssetImage('assets/images/flag3.png'),
+                      )
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(top: 10),
+                        child: Text("المجموعة B" , style: TextStyle(
+                          color: kWhiteColor,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold
+                        ),),
+                      )
+                    ],
+                  ),
+                  ),
+                  SizedBox(width: 30,),
+                   Container(
+                  width: 108,
+                  height: 115,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: kWhite20Color
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(top: 10),
+                        width: 50,
+                        height: 50,
+                        
+                        child: CircleAvatar(
+                           backgroundImage: AssetImage('assets/images/flag4.png'),
+                      )
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(top: 10),
+                        child: Text("المجموعة D" , style: TextStyle(
+                          color: kWhiteColor,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold
+                        ),),
+                      )
+                    ],
+                  ),
+                  ),
+              ],
               ),
-            ),
-            Positioned(
-              
-              left: 20,
-              child:  Container(
-                  margin: const EdgeInsets.only(left: 2),
-                  width: 196,
-                  height: 200,
-                  child: Image.asset("assets/images/mam.png"),
-                  )
-            )
-            ]
-          ),
-          
-         SizedBox(height: 30,),
-         // scrollable Row
-         SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.fromLTRB(10,0,10,0),
-           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-               Container(
-                width: 108,
-                height: 115,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: kWhite20Color
-                ),
-                
-                ),
-                SizedBox(width: 30,),
-                 Container(
-                width: 108,
-                height: 115,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: kWhite20Color
-                ),
-                ),
-                SizedBox(width: 30,),
-                 Container(
-                width: 108,
-                height: 115,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: kWhite20Color
-                ),
-                ),
-                SizedBox(width: 30,),
-                 Container(
-                width: 108,
-                height: 115,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: kWhite20Color
-                ),
-                ),
-            ],
-            ),
-         )
-
-         
-        ],
+           ),
+          SizedBox(height: 20,),
+        
+            MatchItem(),
+            MatchItem(),
+            MatchItem(),
+            MatchItem(),
+        
+           
+          ],
+        ),
       )
     
     );

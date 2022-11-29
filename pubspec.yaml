@@ -67,6 +67,12 @@ flutter:
   assets:
     - assets/images/HotPot.png
     - assets/images/mam.png
+    - assets/images/flag1.jpeg
+    - assets/images/flag2.png
+    - assets/images/flag3.png
+    - assets/images/flag4.png
+    - assets/images/flag5.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
