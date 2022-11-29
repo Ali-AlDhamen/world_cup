@@ -52,7 +52,7 @@ class WelcomePage extends StatelessWidget {
               ]),
               const SizedBox(height: 40),
                Container(
-                margin: const EdgeInsets.only(left: 100),
+                margin: const EdgeInsets.only(left: 30),
                 height: 50,
                 width: 253,
                
@@ -67,7 +67,7 @@ class WelcomePage extends StatelessWidget {
               ),
                Container(
                 alignment: Alignment.topCenter,
-                margin: const EdgeInsets.only(left: 100),
+                margin: const EdgeInsets.only(left: 110),
                 height: 50,
                 width: 253,
                

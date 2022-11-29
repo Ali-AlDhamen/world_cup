@@ -21,7 +21,7 @@ class _AuthCheckerState extends ConsumerState<AuthChecker> {
     return user.when(
       data: (user) {
         if (user != null) {
-          return const  HomeScreen();
+          return const  WelcomePage();
         } else {
 
           return const WelcomePage();
