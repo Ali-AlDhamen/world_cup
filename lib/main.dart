@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:world_cup/screens/home_screen.dart';
 import 'package:world_cup/screens/login_screen.dart';
 import 'package:world_cup/screens/welcome_page.dart';
@@ -23,11 +24,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      
+      // make app from right to left
+      locale: const Locale('ar'),
+      
+      
       title: 'World Cup',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        fontFamily: GoogleFonts.tajawal(
+          wordSpacing: 2,
+          letterSpacing: 1,
+          fontSize: 16,
+          fontWeight: FontWeight.w500,
+        ).fontFamily,
+        )
+      ,
+      home: Directionality( // add this
+        textDirection: TextDirection.rtl, // set this property 
+        child: AuthChecker(),
       ),
-      home: const AuthChecker(),
       routes: {
         WelcomePage.routeName: (context) => const WelcomePage(),
         LoginScreen.routeName:(context) => const LoginScreen(),

@@ -14,7 +14,8 @@ class HomeScreen extends ConsumerStatefulWidget {
   ConsumerState<ConsumerStatefulWidget> createState() => _HomeScreenState();
 }
 class _HomeScreenState extends ConsumerState<HomeScreen> {
-  List<Widget> pages = [ProfileScreen() , ResultScreen() , NewsScreen(), MainScreen()];
+
+  List<Widget> pages = [MainScreen() , NewsScreen() , ResultScreen(), ProfileScreen()];
   int pageIndex =0;
  void selectPage(int index){
   setState(() {
@@ -33,24 +34,24 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         type: BottomNavigationBarType.fixed,
         backgroundColor: kWhite20Color,
         unselectedItemColor: kWhiteColor,
-        selectedItemColor: kBurgundyColor,
+        selectedItemColor: kPinkColor,
         currentIndex: pageIndex,
-        items: [
+        items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.leaderboard_outlined),
-            label: 'Results',
+            icon: Icon(Icons.home_outlined),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_month_outlined),
             label: 'News',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.leaderboard_outlined),
+            label: 'Results',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_outline),
+            label: 'Profile',
           ),
         ],
       ),
