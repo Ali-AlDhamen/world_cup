@@ -23,31 +23,30 @@ class ProfileOptions extends StatelessWidget {
                         
                         child: TextButton(
                           
-                          child: Text("حسابي"),
                           onPressed: (){},
                           style: TextButton.styleFrom(
                             foregroundColor: kWhiteColor, backgroundColor: kPinkColor,
-                            textStyle: TextStyle(
+                            textStyle: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
+                          
+                          child: const Text("حسابي"),
                           ),
                       ),
                   ),
                   
                     
                   TextButton(
-                    child: Text("إعدادات"),
                     onPressed: (){},
                     style: TextButton.styleFrom(
-                      primary: kWhiteColor,
-                      
-                      textStyle: TextStyle(
+                      foregroundColor: kWhiteColor, textStyle: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+                    child: const Text("إعدادات"),
                     )
                 ],
                );

@@ -11,7 +11,7 @@ class MainScreen extends StatelessWidget {
       backgroundColor: kBurgundyColor,
       appBar: AppBar(
    centerTitle: false, 
-        title:  Text('متابعة حية' 
+        title:  const Text('متابعة حية' 
         ),
         backgroundColor: kBurgundyColor,
         elevation: 0,
@@ -70,7 +70,7 @@ class MainScreen extends StatelessWidget {
                       width: 160,
                       height: 70,
                       margin: const EdgeInsets.only(top: 20 , left: 110),
-                child: Text("فرنسا أبطال كأس العالم روسيا 2018" , style: TextStyle(
+                child: const Text("فرنسا أبطال كأس العالم روسيا 2018" , style: TextStyle(
                   color: kWhiteColor,
                   fontSize: 18,
                   fontWeight: FontWeight.bold
@@ -94,7 +94,7 @@ class MainScreen extends StatelessWidget {
               ]
             ),
             
-           SizedBox(height: 30,),
+           const SizedBox(height: 30,),
            // scrollable Row
            SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -116,13 +116,13 @@ class MainScreen extends StatelessWidget {
                         width: 50,
                         height: 50,
                         
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                            backgroundImage: AssetImage('assets/images/flag1.jpeg'),
                       )
                       ),
                       Container(
                         margin: const EdgeInsets.only(top: 10),
-                        child: Text("المجموعة A" , style: TextStyle(
+                        child: const Text("المجموعة A" , style: TextStyle(
                           color: kWhiteColor,
                           fontSize: 14,
                           fontWeight: FontWeight.bold
@@ -132,7 +132,7 @@ class MainScreen extends StatelessWidget {
                   ),
                   
                   ),
-                  SizedBox(width: 30,),
+                  const SizedBox(width: 30,),
                    Container(
                   width: 108,
                   height: 115,
@@ -147,13 +147,13 @@ class MainScreen extends StatelessWidget {
                         width: 50,
                         height: 50,
                         
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                            backgroundImage: AssetImage('assets/images/flag2.png'),
                       )
                       ),
                       Container(
                         margin: const EdgeInsets.only(top: 10),
-                        child: Text("المجموعة C" , style: TextStyle(
+                        child: const Text("المجموعة C" , style: TextStyle(
                           color: kWhiteColor,
                           fontSize: 14,
                           fontWeight: FontWeight.bold
@@ -162,7 +162,7 @@ class MainScreen extends StatelessWidget {
                     ],
                   ),
                   ),
-                  SizedBox(width: 30,),
+                  const SizedBox(width: 30,),
                    Container(
                   width: 108,
                   height: 115,
@@ -177,13 +177,13 @@ class MainScreen extends StatelessWidget {
                         width: 50,
                         height: 50,
                         
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                            backgroundImage: AssetImage('assets/images/flag3.png'),
                       )
                       ),
                       Container(
                         margin: const EdgeInsets.only(top: 10),
-                        child: Text("المجموعة B" , style: TextStyle(
+                        child: const Text("المجموعة B" , style: TextStyle(
                           color: kWhiteColor,
                           fontSize: 14,
                           fontWeight: FontWeight.bold
@@ -192,7 +192,7 @@ class MainScreen extends StatelessWidget {
                     ],
                   ),
                   ),
-                  SizedBox(width: 30,),
+                  const SizedBox(width: 30,),
                    Container(
                   width: 108,
                   height: 115,
@@ -207,13 +207,13 @@ class MainScreen extends StatelessWidget {
                         width: 50,
                         height: 50,
                         
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                            backgroundImage: AssetImage('assets/images/flag4.png'),
                       )
                       ),
                       Container(
                         margin: const EdgeInsets.only(top: 10),
-                        child: Text("المجموعة D" , style: TextStyle(
+                        child: const Text("المجموعة D" , style: TextStyle(
                           color: kWhiteColor,
                           fontSize: 14,
                           fontWeight: FontWeight.bold
@@ -225,12 +225,12 @@ class MainScreen extends StatelessWidget {
               ],
               ),
            ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
         
-            MatchItem(),
-            MatchItem(),
-            MatchItem(),
-            MatchItem(),
+            const MatchItem(),
+            const MatchItem(),
+            const MatchItem(),
+            const MatchItem(),
         
            
           ],

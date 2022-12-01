@@ -12,7 +12,7 @@ class ProfileImage extends StatelessWidget {
         Stack(
       children: [
                
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 50,
                     backgroundImage: AssetImage('assets/images/luffy.png'),
                   ),
@@ -21,16 +21,12 @@ class ProfileImage extends StatelessWidget {
                   bottom: 1,
                   right: 1,
                   child: Container(
-                    child: Padding(
-                      padding: const EdgeInsets.all(2.0),
-                      child: Icon(Icons.edit_outlined, color: kWhiteColor),
-                    ),
                     decoration: BoxDecoration(
                         border: Border.all(
                           width: 3,
                           color: kPinkColor,
                         ),
-                        borderRadius: BorderRadius.all(
+                        borderRadius: const BorderRadius.all(
                           Radius.circular(
                             50,
                           ),
@@ -38,19 +34,23 @@ class ProfileImage extends StatelessWidget {
                         color: kPinkColor,
                         boxShadow: [
                           BoxShadow(
-                            offset: Offset(2, 4),
+                            offset: const Offset(2, 4),
                             color: Colors.black.withOpacity(
                               0.3,
                             ),
                             blurRadius: 3,
                           ),
                         ]),
+                    child: const Padding(
+                      padding: EdgeInsets.all(2.0),
+                      child: Icon(Icons.edit_outlined, color: kWhiteColor),
+                    ),
                   ),
                 ),
       ],
     ),
-    SizedBox(height: 20),
-    Text(
+    const SizedBox(height: 20),
+    const Text(
       'Luffy',
       style: TextStyle(
         color: kWhiteColor,

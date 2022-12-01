@@ -4,7 +4,7 @@ import 'package:world_cup/screens/news_screen.dart';
 import 'package:world_cup/screens/profile_screen.dart';
 import 'package:world_cup/screens/results_screen.dart';
 import '../constants/colors.dart';
-import '../logins/login_controller.dart';
+
 import 'main_screen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -15,7 +15,7 @@ class HomeScreen extends ConsumerStatefulWidget {
 }
 class _HomeScreenState extends ConsumerState<HomeScreen> {
 
-  List<Widget> pages = [MainScreen() , NewsScreen() , ResultScreen(), ProfileScreen()];
+  List<Widget> pages = [const MainScreen() , const NewsScreen() , const ResultScreen(), const ProfileScreen()];
   int pageIndex =0;
  void selectPage(int index){
   setState(() {

@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:world_cup/constants/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,8 +9,6 @@ class WelcomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String info =
-"""تغطية لأحداث كأس العالم\nومتابعة حية لجميع المباريات والفعاليات\nأولا بأول""";
     return Scaffold(
       backgroundColor: kBurgundyColor,
       body: Center(
@@ -36,8 +33,6 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                
-                  
                   child: Container(
                     height: 400,
                     width: 400,
@@ -114,7 +109,6 @@ class WelcomePage extends StatelessWidget {
                     children: [
                       TextButton(
                        style: ButtonStyle(
-                        // dont show animtions
                         overlayColor: MaterialStateProperty.all(Colors.transparent),
                           
                        ),
@@ -135,7 +129,7 @@ class WelcomePage extends StatelessWidget {
                         ),
                         child: TextButton(
                           style: ButtonStyle(
-                        // dont show animtions
+                  
                         overlayColor: MaterialStateProperty.all(Colors.transparent),
                           
                        ),

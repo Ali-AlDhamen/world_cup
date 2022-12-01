@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         ).fontFamily,
         )
       ,
-      home: Directionality( // add this
+      home: const Directionality( // add this
         textDirection: TextDirection.rtl, // set this property 
         child: AuthChecker(),
       ),

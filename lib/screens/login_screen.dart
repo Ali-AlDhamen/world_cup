@@ -83,6 +83,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     },
                   )),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   const Text('Does not have account?'),
                   TextButton(
@@ -95,7 +96,6 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     },
                   )
                 ],
-                mainAxisAlignment: MainAxisAlignment.center,
               ),
             ],
           )),

@@ -16,7 +16,7 @@ class ProfileScreen extends StatelessWidget {
          child: Container(
           margin: const EdgeInsets.only(top: 60.0),
            child: Column(
-             children:  [
+             children:  const [
                ProfileImage(
                 
                ),

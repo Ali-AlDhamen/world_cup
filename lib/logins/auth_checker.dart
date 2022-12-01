@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:world_cup/providers/auth_provider.dart';
 import 'package:world_cup/screens/home_screen.dart';
-import 'package:world_cup/screens/login_screen.dart';
 import 'package:world_cup/screens/welcome_page.dart';
 
 
