@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:world_cup/constants/colors.dart';
+import 'package:world_cup/screens/group_details_screen.dart';
 import 'package:world_cup/widgets/match_item.dart';
 
 class MainScreen extends StatelessWidget {
@@ -91,33 +92,42 @@ class MainScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      width: 108,
-                      height: 115,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16),
-                          color: kWhite20Color),
-                      child: Column(
-                        children: [
-                          Container(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const GroupDetailsScreen()));
+                      },
+                      child: Container(
+                        width: 108,
+                        height: 115,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: kWhite20Color),
+                        child: Column(
+                          children: [
+                            Container(
+                                margin: const EdgeInsets.only(top: 10),
+                                width: 50,
+                                height: 50,
+                                child: const CircleAvatar(
+                                  backgroundImage:
+                                      AssetImage('assets/images/flag1.jpeg'),
+                                )),
+                            Container(
+                              
                               margin: const EdgeInsets.only(top: 10),
-                              width: 50,
-                              height: 50,
-                              child: const CircleAvatar(
-                                backgroundImage:
-                                    AssetImage('assets/images/flag1.jpeg'),
-                              )),
-                          Container(
-                            margin: const EdgeInsets.only(top: 10),
-                            child: const Text(
-                              "المجموعة A",
-                              style: TextStyle(
-                                  color: kWhiteColor,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          )
-                        ],
+                              child: const Text(
+                                "المجموعة A",
+                                style: TextStyle(
+                                    color: kWhiteColor,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(

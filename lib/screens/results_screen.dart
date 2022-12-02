@@ -24,7 +24,7 @@ class ResultScreen extends ConsumerWidget {
       
       const RoundsBar(),
       const SizedBox(height: 30),
-      const StatInformation(),
+      const GroupsTables(),
     ];
     var stat = [
       const StatsBar(),
