@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:world_cup/constants/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:world_cup/screens/home_screen.dart';
 
 class WelcomePage extends StatelessWidget {
   static const String routeName = "/welcome";
@@ -113,7 +114,7 @@ class WelcomePage extends StatelessWidget {
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, "/login");
+                    Navigator.pushNamed(context, HomeScreen.routeName);
                   },
                   child: Text(
                     "تسجيل الدخول",
