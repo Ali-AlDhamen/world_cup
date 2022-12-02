@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:world_cup/widgets/countries_bar.dart';
-import 'package:world_cup/widgets/important_news.dart';
 import 'package:world_cup/widgets/news_element.dart';
 
 import '../constants/colors.dart';

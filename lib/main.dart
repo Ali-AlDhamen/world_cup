@@ -25,11 +25,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      
+
       // make app from right to left
       locale: const Locale('ar'),
-      
-      
+
       title: 'World Cup',
       theme: ThemeData(
         fontFamily: GoogleFonts.tajawal(
@@ -38,15 +37,15 @@ class MyApp extends StatelessWidget {
           fontSize: 16,
           fontWeight: FontWeight.w500,
         ).fontFamily,
-        )
-      ,
-      home: const Directionality( // add this
-        textDirection: TextDirection.rtl, // set this property 
+      ),
+      home: const Directionality(
+        // add this
+        textDirection: TextDirection.rtl, // set this property
         child: AuthChecker(),
       ),
       routes: {
         WelcomePage.routeName: (context) => const WelcomePage(),
-        LoginScreen.routeName:(context) => const LoginScreen(),
+        LoginScreen.routeName: (context) => const LoginScreen(),
         HomeScreen.routeName: (context) => const HomeScreen()
       },
     );

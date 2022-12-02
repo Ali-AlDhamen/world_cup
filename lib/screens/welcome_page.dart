@@ -101,21 +101,6 @@ class WelcomePage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextButton(
-                style: ButtonStyle(
-                  overlayColor: MaterialStateProperty.all(Colors.transparent),
-                ),
-                onPressed: () {},
-                child: Text(
-                  "مستخدم جديد",
-                  style: GoogleFonts.ibmPlexSans(
-                    fontSize: 18,
-                    color: kWhiteColor,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              const SizedBox(width: 20),
               Container(
                 height: 50,
                 width: 150,
@@ -137,6 +122,21 @@ class WelcomePage extends StatelessWidget {
                       color: kBurgundyColor,
                       fontWeight: FontWeight.bold,
                     ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 20),
+              TextButton(
+                style: ButtonStyle(
+                  overlayColor: MaterialStateProperty.all(Colors.transparent),
+                ),
+                onPressed: () {},
+                child: Text(
+                  "مستخدم جديد",
+                  style: GoogleFonts.ibmPlexSans(
+                    fontSize: 18,
+                    color: kWhiteColor,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),

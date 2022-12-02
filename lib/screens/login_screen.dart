@@ -32,8 +32,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
           child: ListView(
             children: <Widget>[
               Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.all(10),
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(10),
               ),
               Container(
                   alignment: Alignment.center,

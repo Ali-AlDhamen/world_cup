@@ -14,7 +14,7 @@ class ImportantNews extends StatelessWidget {
           // nav push
           Navigator.push(context, MaterialPageRoute(
             builder: (context) {
-              return ImportantNewsDetails();
+              return const ImportantNewsDetails();
             },
           ));
         },
@@ -86,18 +86,17 @@ class ImportantNewsDetails extends StatelessWidget {
                   ),
                 )),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Expanded(
             flex: 1,
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 270,
                   height: 46,
                   child: Text(
-
                     "مواجهة ودية بين منتخب الإمارات ونظيره الأرجنتيني",
                     textAlign: TextAlign.right,
                     style: TextStyle(
@@ -106,14 +105,14 @@ class ImportantNewsDetails extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Row(
-                      children: [
+                      children: const [
                         Text(
                           "42",
                           style: TextStyle(color: kGrayColor),
@@ -156,7 +155,7 @@ class ImportantNewsDetails extends StatelessWidget {
                       ],
                     ),
                     Column(
-                      children: [
+                      children: const [
                         Text(
                           "أحمد محمد",
                           style: TextStyle(
@@ -173,7 +172,7 @@ class ImportantNewsDetails extends StatelessWidget {
                         ),
                       ],
                     ),
-                    CircleAvatar(
+                    const CircleAvatar(
                       radius: 20,
                       backgroundImage: AssetImage('assets/images/luffy.png'),
                     ),
@@ -182,25 +181,23 @@ class ImportantNewsDetails extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Expanded(
-            flex: 1,
-            child: SizedBox(
-              width: 320,
-              height: 150,
-              child: Text(
-                "أعلن ليونيل سكالوني المدير الفني للمنتخب الأرجنتيني قائمة منتخب بلاده استعدادا لمنافسات كأس العالم 2022، والمقرر إقامته خلال شهري نوفمبر وديسمبر في قطر.",
-                textAlign: TextAlign.right,
-                style: GoogleFonts.ibmPlexSans(
-                    color: kWhiteColor,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
+              flex: 1,
+              child: SizedBox(
+                width: 320,
+                height: 150,
+                child: Text(
+                  "أعلن ليونيل سكالوني المدير الفني للمنتخب الأرجنتيني قائمة منتخب بلاده استعدادا لمنافسات كأس العالم 2022، والمقرر إقامته خلال شهري نوفمبر وديسمبر في قطر.",
+                  textAlign: TextAlign.right,
+                  style: GoogleFonts.ibmPlexSans(
+                      color: kWhiteColor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
                 ),
-            )
-            ),
-          
+              )),
         ]));
   }
 }

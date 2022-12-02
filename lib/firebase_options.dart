@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '141000027202',
     projectId: 'world-cup-5ff09',
     storageBucket: 'world-cup-5ff09.appspot.com',
-    iosClientId: '141000027202-c2vgjm93s5r4psiv09hlco7b4d61eb7a.apps.googleusercontent.com',
+    iosClientId:
+        '141000027202-c2vgjm93s5r4psiv09hlco7b4d61eb7a.apps.googleusercontent.com',
     iosBundleId: 'com.example.worldCup',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '141000027202',
     projectId: 'world-cup-5ff09',
     storageBucket: 'world-cup-5ff09.appspot.com',
-    iosClientId: '141000027202-c2vgjm93s5r4psiv09hlco7b4d61eb7a.apps.googleusercontent.com',
+    iosClientId:
+        '141000027202-c2vgjm93s5r4psiv09hlco7b4d61eb7a.apps.googleusercontent.com',
     iosBundleId: 'com.example.worldCup',
   );
 }

@@ -10,16 +10,13 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBurgundyColor,
-      body: 
-       Center(
-         child: Container(
-          margin: const EdgeInsets.only(top: 60.0),
-           child: Column(
-             children:  const [
-               ProfileImage(
-                
-               ),
+        backgroundColor: kBurgundyColor,
+        body: Center(
+          child: Container(
+            margin: const EdgeInsets.only(top: 60.0),
+            child: Column(
+              children: const [
+                ProfileImage(),
                 SizedBox(height: 30),
                 ProfileOptions(),
                 ProfileInfoElement(
@@ -28,27 +25,20 @@ class ProfileScreen extends StatelessWidget {
                   subtitle: "Luffy",
                 ),
                 ProfileInfoElement(
-                  avatar: Icons.email_outlined,
-                  title: "البريد الالكتروني",
-                  subtitle: "luffy@gmail.com"),
+                    avatar: Icons.email_outlined,
+                    title: "البريد الالكتروني",
+                    subtitle: "luffy@gmail.com"),
                 ProfileInfoElement(
-                  avatar: Icons.local_phone_outlined,
-                  title: "رقم الهاتف",
-                  subtitle: "1000000000"),
+                    avatar: Icons.local_phone_outlined,
+                    title: "رقم الهاتف",
+                    subtitle: "1000000000"),
                 ProfileInfoElement(
-                  avatar: Icons.location_on_outlined,
-                  title: "المدينة",
-                  subtitle: "اليابان"),
-                
-                
-                
-               
-               
-             ],
-           ),
-         ),
-       )
-    );
-    
+                    avatar: Icons.location_on_outlined,
+                    title: "المدينة",
+                    subtitle: "اليابان"),
+              ],
+            ),
+          ),
+        ));
   }
 }

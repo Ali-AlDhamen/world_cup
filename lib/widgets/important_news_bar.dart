@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'important_news.dart';
 
-
 class ImportantNewsBar extends StatelessWidget {
   const ImportantNewsBar({super.key});
 
@@ -20,6 +19,5 @@ class ImportantNewsBar extends StatelessWidget {
         ],
       ),
     );
-    
   }
 }

@@ -13,7 +13,7 @@ class CountriesBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
-              margin: const EdgeInsets.only(right: 10 , left: 15),
+              margin: const EdgeInsets.only(right: 10, left: 15),
               padding: const EdgeInsets.all(11),
               height: 45,
               width: 115,
