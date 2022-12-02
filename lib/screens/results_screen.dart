@@ -8,9 +8,9 @@ import 'package:world_cup/widgets/groups_table.dart';
 import 'package:world_cup/widgets/results_options.dart';
 import 'package:world_cup/widgets/rounds_bar.dart';
 import 'package:world_cup/widgets/stat_information.dart';
+import 'package:world_cup/widgets/stats_bar.dart';
 
 class ResultScreen extends ConsumerWidget {
-  
   const ResultScreen({super.key});
 
   @override
@@ -18,8 +18,19 @@ class ResultScreen extends ConsumerWidget {
     final button = ref.watch(buttonProvider);
     bool tables = button == "GroupsTables";
     bool stats = button == "stat";
- 
 
+    var table = [
+     
+      
+      const RoundsBar(),
+      const SizedBox(height: 30),
+      const StatInformation(),
+    ];
+    var stat = [
+      const StatsBar(),
+      const SizedBox(height: 30),
+      const StatInformation(),
+    ];
     return Scaffold(
       backgroundColor: kBurgundyColor,
       body: SingleChildScrollView(
@@ -28,17 +39,11 @@ class ResultScreen extends ConsumerWidget {
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
-            children:  [
+            children: [
               const ResultsOptionsBar(),
               const SizedBox(height: 30),
-              const RoundsBar(),
-              const SizedBox(height: 30),
-              if(tables)
-                const GroupsTables(),
-              if(stats)
-               const StatInformation()
-            
-            
+              if (tables) ...table,
+              if (stats) ...stat,
             ],
           ),
         ),

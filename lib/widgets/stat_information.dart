@@ -28,6 +28,7 @@ class StatInformation extends StatelessWidget {
     return Column(
       children: [
         const ListTile(
+          
           title: Text(
             '#   اللاعب',
             style: TextStyle(
@@ -44,6 +45,7 @@ class StatInformation extends StatelessWidget {
           thickness: 1,
         ),
         ListView.builder(
+          padding: EdgeInsets.zero,
           shrinkWrap: true,
           itemCount: players.length,
           itemBuilder: (context, index) {
@@ -75,4 +77,3 @@ class StatInformation extends StatelessWidget {
     );
   }
 }
-
