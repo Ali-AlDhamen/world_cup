@@ -11,6 +11,7 @@ import 'package:world_cup/widgets/stat_information.dart';
 import 'package:world_cup/widgets/stats_bar.dart';
 
 class ResultScreen extends ConsumerWidget {
+  static const String routeName = "/results";
   const ResultScreen({super.key});
 
   @override
@@ -20,8 +21,6 @@ class ResultScreen extends ConsumerWidget {
     bool stats = button == "stat";
 
     var table = [
-     
-      
       const RoundsBar(),
       const SizedBox(height: 30),
       const GroupsTables(),

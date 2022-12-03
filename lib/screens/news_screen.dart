@@ -7,6 +7,7 @@ import '../widgets/important_news_bar.dart';
 import '../widgets/search_bar.dart';
 
 class NewsScreen extends StatelessWidget {
+  static const String routeName = "/news";
   const NewsScreen({super.key});
 
   @override

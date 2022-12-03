@@ -5,6 +5,7 @@ import 'package:world_cup/widgets/profile_image.dart';
 import 'package:world_cup/widgets/profile_options.dart';
 
 class ProfileScreen extends StatelessWidget {
+  static const String routeName = "/profile";
   const ProfileScreen({super.key});
 
   @override

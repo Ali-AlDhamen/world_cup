@@ -6,6 +6,7 @@ import 'package:world_cup/widgets/match_details_scores.dart';
 import 'package:world_cup/widgets/match_score.dart';
 
 class GroupDetailsScreen extends StatelessWidget {
+  static const String routeName = "/group_details";
   const GroupDetailsScreen({super.key});
 
   @override

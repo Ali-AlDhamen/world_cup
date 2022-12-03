@@ -4,6 +4,7 @@ import 'package:world_cup/screens/group_details_screen.dart';
 import 'package:world_cup/widgets/match_item.dart';
 
 class MainScreen extends StatelessWidget {
+  static const String routeName = "/main";
   const MainScreen({super.key});
 
   @override
@@ -94,10 +95,7 @@ class MainScreen extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const GroupDetailsScreen()));
+                        Navigator.pushNamed(context, GroupDetailsScreen.routeName); 
                       },
                       child: Container(
                         width: 108,
