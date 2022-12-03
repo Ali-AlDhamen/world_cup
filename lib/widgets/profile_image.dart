@@ -13,7 +13,7 @@ class ProfileImage extends StatelessWidget {
           children: [
             const CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage('assets/images/luffy.png'),
+              backgroundImage: AssetImage('assets/images/ali.png'),
             ),
             Positioned(
               bottom: 1,
@@ -49,7 +49,7 @@ class ProfileImage extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         const Text(
-          'Luffy',
+          'د.علي',
           style: TextStyle(
             color: kWhiteColor,
             fontSize: 20,

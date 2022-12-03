@@ -22,20 +22,20 @@ class ProfileScreen extends StatelessWidget {
                 ProfileInfoElement(
                   avatar: Icons.person_outline_sharp,
                   title: "الاسم",
-                  subtitle: "Luffy",
+                  subtitle: "د. علي الضامن",
                 ),
                 ProfileInfoElement(
                     avatar: Icons.email_outlined,
                     title: "البريد الالكتروني",
-                    subtitle: "luffy@gmail.com"),
+                    subtitle: "ali77dhamen@hotmail.com"),
                 ProfileInfoElement(
                     avatar: Icons.local_phone_outlined,
                     title: "رقم الهاتف",
-                    subtitle: "1000000000"),
+                    subtitle: "0505050505"),
                 ProfileInfoElement(
                     avatar: Icons.location_on_outlined,
                     title: "المدينة",
-                    subtitle: "اليابان"),
+                    subtitle: "السعودية، الشرقية"),
               ],
             ),
           ),

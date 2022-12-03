@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       // make app from right to left
-      locale: const Locale('ar'),
+    
 
       title: 'World Cup',
       theme: ThemeData(
@@ -38,15 +38,16 @@ class MyApp extends StatelessWidget {
           fontWeight: FontWeight.w500,
         ).fontFamily,
       ),
-      home: const Directionality(
-        // add this
-        textDirection: TextDirection.rtl, // set this property
-        child: AuthChecker(),
-      ),
+      home: WelcomePage(),
+      
       routes: {
         WelcomePage.routeName: (context) => const WelcomePage(),
         LoginScreen.routeName: (context) => const LoginScreen(),
-        HomeScreen.routeName: (context) => const HomeScreen()
+        HomeScreen.routeName: (context) => const Directionality(
+        // add this
+        textDirection: TextDirection.rtl, // set this property
+        child: HomeScreen(),
+      ),
       },
     );
   }

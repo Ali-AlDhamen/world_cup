@@ -157,7 +157,7 @@ class ImportantNewsDetails extends StatelessWidget {
                     Column(
                       children: const [
                         Text(
-                          "أحمد محمد",
+                          "د.علي",
                           style: TextStyle(
                               color: kWhiteColor,
                               fontSize: 14,
@@ -174,7 +174,7 @@ class ImportantNewsDetails extends StatelessWidget {
                     ),
                     const CircleAvatar(
                       radius: 20,
-                      backgroundImage: AssetImage('assets/images/luffy.png'),
+                      backgroundImage: AssetImage('assets/images/ali.png'),
                     ),
                   ],
                 ),

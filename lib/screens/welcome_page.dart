@@ -43,7 +43,7 @@ class WelcomePage extends StatelessWidget {
           ]),
           const SizedBox(height: 40),
           Container(
-              margin: const EdgeInsets.only(left: 30),
+              margin: const EdgeInsets.only(left: 120),
               height: 50,
               width: 253,
               child: Text("كأس العالم",
@@ -102,6 +102,21 @@ class WelcomePage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              TextButton(
+                style: ButtonStyle(
+                  overlayColor: MaterialStateProperty.all(Colors.transparent),
+                ),
+                onPressed: () {},
+                child: Text(
+                  "مستخدم جديد",
+                  style: GoogleFonts.ibmPlexSans(
+                    fontSize: 18,
+                    color: kWhiteColor,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 20),
               Container(
                 height: 50,
                 width: 150,
@@ -114,7 +129,8 @@ class WelcomePage extends StatelessWidget {
                     overlayColor: MaterialStateProperty.all(Colors.transparent),
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, HomeScreen.routeName);
+                    Navigator.pushReplacementNamed(
+                        context, HomeScreen.routeName);
                   },
                   child: Text(
                     "تسجيل الدخول",
@@ -123,21 +139,6 @@ class WelcomePage extends StatelessWidget {
                       color: kBurgundyColor,
                       fontWeight: FontWeight.bold,
                     ),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 20),
-              TextButton(
-                style: ButtonStyle(
-                  overlayColor: MaterialStateProperty.all(Colors.transparent),
-                ),
-                onPressed: () {},
-                child: Text(
-                  "مستخدم جديد",
-                  style: GoogleFonts.ibmPlexSans(
-                    fontSize: 18,
-                    color: kWhiteColor,
-                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
