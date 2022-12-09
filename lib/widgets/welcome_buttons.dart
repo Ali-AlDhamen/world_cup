@@ -18,7 +18,7 @@ class WelcomeButtons extends StatelessWidget {
             overlayColor: MaterialStateProperty.all(Colors.transparent),
           ),
           onPressed: () {
-            Navigator.pushNamed(context, RegisterScreen.routeName);
+            Navigator.pushReplacementNamed(context, RegisterScreen.routeName);
           },
           child: Text(
             "مستخدم جديد",
@@ -42,7 +42,7 @@ class WelcomeButtons extends StatelessWidget {
               overlayColor: MaterialStateProperty.all(Colors.transparent),
             ),
             onPressed: () {
-              Navigator.pushNamed(context, LoginScreen.routeName);
+              Navigator.pushReplacementNamed(context, LoginScreen.routeName);
             },
             child: Text(
               "تسجيل الدخول",

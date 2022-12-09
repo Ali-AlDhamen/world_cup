@@ -50,7 +50,7 @@ class _AuthFormState extends State<AuthForm> {
           _userImageFile as File,
           context);
       // ignore: use_build_context_synchronously
-      Navigator.pushNamed(context, HomeScreen.routeName);
+      Navigator.pushReplacementNamed(context, HomeScreen.routeName);
     }
   }
 

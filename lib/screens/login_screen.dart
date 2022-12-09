@@ -76,7 +76,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     onPressed: () {
                       Auth.loginIn(emailController.text.trim(),
                           passwordController.text.trim(), context);
-                      Navigator.pushNamed(context, HomeScreen.routeName);
+                      Navigator.pushReplacementNamed(context, HomeScreen.routeName);
                     },
                   )),
               Row(
@@ -92,7 +92,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(context, RegisterScreen.routeName);
+                      Navigator.pushReplacementNamed(context, RegisterScreen.routeName);
                       //signup screen
                     },
                   )

@@ -9,7 +9,7 @@ import 'package:flutter/services.dart';
 
 class Auth {
   static final FirebaseAuth _auth = FirebaseAuth.instance;
-  static UserCredential? authResult;
+  static String? userId;
   static void showsnackbar(BuildContext context, String text) {
     final snackBar = SnackBar(
       elevation: 0,
@@ -27,8 +27,9 @@ class Auth {
   static Future<void> loginIn(
       String email, String password, BuildContext context) async {
     try {
-      authResult = await _auth.signInWithEmailAndPassword(
+      UserCredential authResult = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
+      userId = authResult.user!.uid;
     } on PlatformException catch (e) {
       if (e.code == 'user-not-found') {
         showsnackbar(context, "No user found for that email.");
@@ -43,19 +44,20 @@ class Auth {
   static Future<void> signUp(String email, String password, String name,
       String address, String phone, File image, BuildContext context) async {
     try {
-      authResult = await _auth.createUserWithEmailAndPassword(
+      UserCredential authResult = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
 
       final ref = FirebaseStorage.instance
           .ref()
           .child('user_image')
-          .child('${authResult!.user!.uid}.jpg');
+          .child('${authResult.user!.uid}.jpg');
+      userId = authResult.user!.uid;
 
       await ref.putFile(image);
       final url = await ref.getDownloadURL();
       await FirebaseFirestore.instance
           .collection('users')
-          .doc(authResult!.user!.uid)
+          .doc(authResult.user!.uid)
           .set({
         'name': name,
         'email': email,
@@ -86,9 +88,12 @@ class Auth {
   }
 
   static Future updateInformation(String update, String newValue) async {
-    final userDocument =  FirebaseFirestore.instance
+    User? user = _auth.currentUser;
+    userId = user!.uid;
+    final userDocument = FirebaseFirestore.instance
         .collection('users')
-        .doc(authResult!.user!.uid);
+        .doc(userId);
+    
 
     userDocument.update({update: newValue});
   }
