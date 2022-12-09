@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 
 class ProfileImage extends StatelessWidget {
-  const ProfileImage({super.key});
+  String? image_url;
+  String? name;
+  ProfileImage({super.key, this.image_url, this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +13,9 @@ class ProfileImage extends StatelessWidget {
       children: [
         Stack(
           children: [
-            const CircleAvatar(
+            CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage('assets/images/ali.png'),
+              backgroundImage: NetworkImage(image_url as String),
             ),
             Positioned(
               bottom: 1,
@@ -48,8 +50,8 @@ class ProfileImage extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 20),
-        const Text(
-          'د.علي',
+        Text(
+          name as String,
           style: TextStyle(
             color: kWhiteColor,
             fontSize: 20,

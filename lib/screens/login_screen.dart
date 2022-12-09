@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:world_cup/constants/colors.dart';
+import 'package:world_cup/screens/register_screen.dart';
 
-import '../logins/login_controller.dart';
-import '../logins/login_state.dart';
+import '../Auth_Repository/auth.dart';
+import 'home_screen.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   static const String routeName = '/login';
@@ -18,30 +20,22 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    ref.listen<LoginState>(loginControllerProvider, ((previous, state) {
-      if (state is LoginStateError) {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text(state.error),
-        ));
-      }
-    }));
-
     return Scaffold(
+      backgroundColor: kWhiteColor,
+      
       body: Padding(
           padding: const EdgeInsets.all(10),
           child: ListView(
+            
             children: <Widget>[
+
+              SizedBox(height: 200,),
+              
               Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
               ),
-              Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.all(10),
-                  child: const Text(
-                    'Sign in',
-                    style: TextStyle(fontSize: 20),
-                  )),
+              
               Container(
                 padding: const EdgeInsets.all(10),
                 child: TextField(
@@ -60,38 +54,44 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Password',
+                    
                   ),
                 ),
               ),
-              TextButton(
-                onPressed: () {
-                  //forgot password screen
-                },
-                child: const Text(
-                  'Forgot Password',
-                ),
+              SizedBox(
+                height: 20,
               ),
+              
               Container(
                   height: 50,
                   padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: kBurgundyColor,
+                      onPrimary: kWhiteColor,
+                     
+                      
+                    ),
                     child: const Text('Login'),
                     onPressed: () {
-                      ref
-                          .read(loginControllerProvider.notifier)
-                          .login(emailController.text, passwordController.text);
+                      Auth.loginIn(emailController.text.trim(), passwordController.text.trim());
+                      Navigator.pushNamed(context, HomeScreen.routeName);
                     },
                   )),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
+                children: [
                   const Text('Does not have account?'),
                   TextButton(
                     child: const Text(
-                      'Sign in',
-                      style: TextStyle(fontSize: 20),
+                      'SignUp',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: kBurgundyColor,
+                        ),
                     ),
                     onPressed: () {
+                      Navigator.pushNamed(context, RegisterScreen.routeName);
                       //signup screen
                     },
                   )

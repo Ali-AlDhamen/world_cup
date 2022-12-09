@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:world_cup/constants/colors.dart';
 import 'package:world_cup/screens/group_details_screen.dart';
 import 'package:world_cup/screens/home_screen.dart';
 import 'package:world_cup/screens/login_screen.dart';
@@ -42,8 +44,26 @@ class MyApp extends StatelessWidget {
           fontSize: 16,
           fontWeight: FontWeight.w500,
         ).fontFamily,
+        
       ),
-      home: const WelcomePage(),
+      home: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
+
+          if (snapshot.hasData) {
+            return const Directionality(
+              // add this
+              textDirection: TextDirection.rtl, // set this property
+              child: HomeScreen(),
+            );
+          } else {
+            return const WelcomePage();
+          }
+        },
+      ),
 
       routes: {
         WelcomePage.routeName: (context) => const WelcomePage(),
@@ -56,10 +76,11 @@ class MyApp extends StatelessWidget {
         GroupDetailsScreen.routeName: (context) => const GroupDetailsScreen(),
         RegisterScreen.routeName: (context) => const RegisterScreen(),
         ResultScreen.routeName: (context) => const ResultScreen(),
-        ProfileScreen.routeName: (context) => const ProfileScreen(),
+        ProfileScreen.routeName: (context) =>  ProfileScreen(),
         NewsScreen.routeName: (context) => const NewsScreen(),
         MainScreen.routeName: (context) => const MainScreen(),
-        ImportantNewsDetailsScreen.routeName: (context) => const ImportantNewsDetailsScreen(),
+        ImportantNewsDetailsScreen.routeName: (context) =>
+            const ImportantNewsDetailsScreen(),
       },
     );
   }

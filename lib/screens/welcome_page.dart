@@ -18,7 +18,7 @@ class WelcomePage extends StatelessWidget {
           WelcomeImage(),
           SizedBox(height: 40),
           WelcomeText(),
-          SizedBox(height: 40),
+          SizedBox(height: 100),
           WelcomeButtons()
         ]),
       ),

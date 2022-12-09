@@ -19,7 +19,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     const MainScreen(),
     const NewsScreen(),
     const ResultScreen(),
-    const ProfileScreen()
+     ProfileScreen()
   ];
   int pageIndex = 0;
   void selectPage(int index) {
