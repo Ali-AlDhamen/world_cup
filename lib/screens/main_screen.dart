@@ -95,7 +95,8 @@ class MainScreen extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, GroupDetailsScreen.routeName); 
+                        Navigator.pushNamed(
+                            context, GroupDetailsScreen.routeName);
                       },
                       child: Container(
                         width: 108,
@@ -114,7 +115,6 @@ class MainScreen extends StatelessWidget {
                                       AssetImage('assets/images/flag1.jpeg'),
                                 )),
                             Container(
-                              
                               margin: const EdgeInsets.only(top: 10),
                               child: const Text(
                                 "المجموعة A",

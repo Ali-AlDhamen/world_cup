@@ -1,11 +1,16 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
 
 class ProfileImage extends StatelessWidget {
-  String? image_url;
-  String? name;
-  ProfileImage({super.key, this.image_url, this.name});
+  final String? imageUrl;
+  final String? name;
+  const ProfileImage({
+    Key? key,
+    this.imageUrl,
+    this.name,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +20,7 @@ class ProfileImage extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 50,
-              backgroundImage: NetworkImage(image_url as String),
+              backgroundImage: NetworkImage(imageUrl as String),
             ),
             Positioned(
               bottom: 1,
@@ -52,7 +57,7 @@ class ProfileImage extends StatelessWidget {
         const SizedBox(height: 20),
         Text(
           name as String,
-          style: TextStyle(
+          style: const TextStyle(
             color: kWhiteColor,
             fontSize: 20,
             fontWeight: FontWeight.bold,

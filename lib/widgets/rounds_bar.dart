@@ -111,7 +111,7 @@ class _RoundsBarState extends State<RoundsBar> {
               child: const Text(
                 "دور ال 8",
                 style: TextStyle(
-                  color: kWhiteColor ,
+                  color: kWhiteColor,
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
                 ),

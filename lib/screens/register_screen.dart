@@ -9,11 +9,11 @@ class RegisterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: kBurgundyColor,
       body: Center(
           child: Card(
-        margin: const EdgeInsets.all(20),
+        margin: EdgeInsets.all(20),
         child: AuthForm(),
       )),
     );

@@ -65,7 +65,6 @@ class _StatsBarsState extends State<StatsBar> {
                   btn2 = true;
                   btn3 = false;
                   btn4 = false;
-
                 });
               },
               style: ElevatedButton.styleFrom(
@@ -97,7 +96,6 @@ class _StatsBarsState extends State<StatsBar> {
                   btn2 = false;
                   btn3 = true;
                   btn4 = false;
-
                 });
               },
               style: ElevatedButton.styleFrom(
@@ -110,7 +108,7 @@ class _StatsBarsState extends State<StatsBar> {
               child: const Text(
                 "كروت صفراء",
                 style: TextStyle(
-                  color: kWhiteColor ,
+                  color: kWhiteColor,
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
                 ),
@@ -129,7 +127,6 @@ class _StatsBarsState extends State<StatsBar> {
                   btn2 = false;
                   btn3 = false;
                   btn4 = true;
-     
                 });
               },
               style: ElevatedButton.styleFrom(
@@ -149,8 +146,6 @@ class _StatsBarsState extends State<StatsBar> {
               ),
             ),
           ),
-         
-         
         ],
       ),
     );

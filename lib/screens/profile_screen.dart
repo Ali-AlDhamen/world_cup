@@ -1,7 +1,6 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:world_cup/constants/colors.dart';
-import 'package:world_cup/widgets/Profile_info_element.dart';
+import 'package:world_cup/widgets/profile_info_element.dart';
 import 'package:world_cup/widgets/profile_image.dart';
 import 'package:world_cup/widgets/profile_options.dart';
 
@@ -10,7 +9,7 @@ import '../Auth_Repository/auth.dart';
 class ProfileScreen extends StatefulWidget {
   static const String routeName = "/profile";
 
-  ProfileScreen({super.key});
+  const ProfileScreen({super.key});
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
@@ -20,10 +19,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
   bool isLoading = true;
   var userDocument;
 
-  Future<void> getData() async {
+  void getData() async {
     final value = await Auth.getUserData();
     setState(() {
       userDocument = value;
+    });
+
+    setState(() {
+      isLoading = false;
     });
   }
 
@@ -31,14 +34,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   void initState() {
     super.initState();
     getData();
-    // wait 0.5s
-    Future.delayed(const Duration(milliseconds: 500), () {
-      // 5s over, navigate to a new page
-      setState(() {
-        isLoading = false;
-      });
-    });
-   
   }
 
   @override
@@ -65,14 +60,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
               )
             : Center(
                 child: Container(
-                  margin: const EdgeInsets.only(top: 30.0 , left: 30.0),
+                  margin: const EdgeInsets.only(top: 30.0, left: 30.0),
                   child: Column(
                     children: [
                       ProfileImage(
-                          image_url: userDocument['image_url'],
+                          imageUrl: userDocument['image_url'],
                           name: userDocument['name']),
-                      SizedBox(height: 30),
-                      ProfileOptions(),
+                      const SizedBox(height: 30),
+                      const ProfileOptions(),
                       ProfileInfoElement(
                         avatar: Icons.person_outline_sharp,
                         title: "الاسم",

@@ -9,6 +9,8 @@ import '../Auth_Repository/auth.dart';
 import '../screens/home_screen.dart';
 
 class AuthForm extends StatefulWidget {
+  const AuthForm({super.key});
+
   @override
   State<AuthForm> createState() => _AuthFormState();
 }
@@ -47,8 +49,18 @@ class _AuthFormState extends State<AuthForm> {
           phoneController.text.trim(),
           _userImageFile as File,
           context);
+      // ignore: use_build_context_synchronously
       Navigator.pushNamed(context, HomeScreen.routeName);
     }
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+    usernameController.dispose();
+    phoneController.dispose();
   }
 
   @override
@@ -135,21 +147,21 @@ class _AuthFormState extends State<AuthForm> {
               const SizedBox(height: 10),
               ElevatedButton(
                   onPressed: () => _submit(context),
-                  child: Text('Signup'),
                   style: ElevatedButton.styleFrom(
-                    primary: kBurgundyColor,
-                    onPrimary: Colors.white,
-                  )),
+                    foregroundColor: Colors.white,
+                    backgroundColor: kBurgundyColor,
+                  ),
+                  child: const Text('Signup')),
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pushReplacementNamed(
                     LoginScreen.routeName,
                   );
                 },
-                child: Text('I already have an account'),
                 style: TextButton.styleFrom(
-                  primary: kBurgundyColor,
+                  foregroundColor: kBurgundyColor,
                 ),
+                child: const Text('I already have an account'),
               ),
             ],
           ),

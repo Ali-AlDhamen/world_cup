@@ -45,8 +45,8 @@ class _UserImagePickerState extends State<UserImagePicker> {
               elevation: 0,
             ),
             onPressed: _pickImage,
-            icon: Icon(Icons.image),
-            label: Text("Add Image")),
+            icon: const Icon(Icons.image),
+            label: const Text("Add Image")),
       ],
     );
   }

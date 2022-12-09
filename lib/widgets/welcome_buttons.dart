@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:world_cup/screens/login_screen.dart';
 
 import '../constants/colors.dart';
-import '../screens/home_screen.dart';
 import '../screens/register_screen.dart';
 
 class WelcomeButtons extends StatelessWidget {

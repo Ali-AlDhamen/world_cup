@@ -25,7 +25,7 @@ class _MatchDetailsBarState extends State<MatchDetailsBar> {
               btn1 = false;
               btn2 = false;
               btn3 = true;
-               btn4 = false;
+              btn4 = false;
             });
           },
           style: ElevatedButton.styleFrom(
@@ -75,7 +75,7 @@ class _MatchDetailsBarState extends State<MatchDetailsBar> {
               btn1 = true;
               btn2 = false;
               btn3 = false;
-               btn4 = false;
+              btn4 = false;
             });
           },
           style: ElevatedButton.styleFrom(
@@ -100,7 +100,7 @@ class _MatchDetailsBarState extends State<MatchDetailsBar> {
               btn1 = false;
               btn2 = false;
               btn3 = false;
-               btn4 = true;
+              btn4 = true;
             });
           },
           style: ElevatedButton.styleFrom(

@@ -3,5 +3,6 @@ class Player {
   final String playerName;
   final String playerCountry;
   final String playerPoints;
-  Player(this.playerRank , this.playerName , this.playerCountry , this.playerPoints);
+  Player(
+      this.playerRank, this.playerName, this.playerCountry, this.playerPoints);
 }

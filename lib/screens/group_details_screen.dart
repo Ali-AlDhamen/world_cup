@@ -31,7 +31,8 @@ class GroupDetailsScreen extends StatelessWidget {
                         backgroundColor: kWhite20Color,
                         child: CircleAvatar(
                           radius: (18),
-                          backgroundImage: AssetImage("assets/images/flag6.png"),
+                          backgroundImage:
+                              AssetImage("assets/images/flag6.png"),
                         ),
                       ),
                       const SizedBox(
@@ -75,7 +76,8 @@ class GroupDetailsScreen extends StatelessWidget {
                         backgroundColor: kWhite20Color,
                         child: CircleAvatar(
                           radius: (18),
-                          backgroundImage: AssetImage("assets/images/flag8.png"),
+                          backgroundImage:
+                              AssetImage("assets/images/flag8.png"),
                         ),
                       ),
                       const SizedBox(
@@ -128,11 +130,17 @@ class GroupDetailsScreen extends StatelessWidget {
                 height: 10,
               ),
               const MatchScore(),
-              const SizedBox(height: 15,),
+              const SizedBox(
+                height: 15,
+              ),
               const MatchScore(),
-              const SizedBox(height: 15,),
+              const SizedBox(
+                height: 15,
+              ),
               const MatchScore(),
-              const SizedBox(height: 15,),
+              const SizedBox(
+                height: 15,
+              ),
               const MatchScore(),
             ],
           ),

@@ -28,7 +28,6 @@ class StatInformation extends StatelessWidget {
     return Column(
       children: [
         const ListTile(
-          
           title: Text(
             '#   اللاعب',
             style: TextStyle(

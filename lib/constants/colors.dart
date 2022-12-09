@@ -8,7 +8,3 @@ const Color kGrayColor = Color(0xFFC8C8C8);
 const Color kWhite20Color = Color.fromRGBO(255, 255, 255, 0.5);
 const Color kPinkColor = Color(0xFFFF004C);
 const Color kDarkGrayColor = Color(0xFF65656B);
-
-
-
-

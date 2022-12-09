@@ -19,23 +19,27 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   TextEditingController passwordController = TextEditingController();
 
   @override
+  void dispose() {
+    super.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kWhiteColor,
-      
       body: Padding(
           padding: const EdgeInsets.all(10),
           child: ListView(
-            
             children: <Widget>[
-
-              SizedBox(height: 200,),
-              
+              const SizedBox(
+                height: 200,
+              ),
               Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
               ),
-              
               Container(
                 padding: const EdgeInsets.all(10),
                 child: TextField(
@@ -54,27 +58,24 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Password',
-                    
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              
               Container(
                   height: 50,
                   padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: kBurgundyColor,
-                      onPrimary: kWhiteColor,
-                     
-                      
+                      foregroundColor: kWhiteColor,
+                      backgroundColor: kBurgundyColor,
                     ),
                     child: const Text('Login'),
                     onPressed: () {
-                      Auth.loginIn(emailController.text.trim(), passwordController.text.trim());
+                      Auth.loginIn(emailController.text.trim(),
+                          passwordController.text.trim(), context);
                       Navigator.pushNamed(context, HomeScreen.routeName);
                     },
                   )),
@@ -88,7 +89,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       style: TextStyle(
                         fontSize: 20,
                         color: kBurgundyColor,
-                        ),
+                      ),
                     ),
                     onPressed: () {
                       Navigator.pushNamed(context, RegisterScreen.routeName);

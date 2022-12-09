@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:world_cup/constants/colors.dart';
 import 'package:world_cup/screens/group_details_screen.dart';
 import 'package:world_cup/screens/home_screen.dart';
 import 'package:world_cup/screens/login_screen.dart';
@@ -44,7 +43,6 @@ class MyApp extends StatelessWidget {
           fontSize: 16,
           fontWeight: FontWeight.w500,
         ).fontFamily,
-        
       ),
       home: StreamBuilder(
         stream: FirebaseAuth.instance.authStateChanges(),
@@ -76,7 +74,7 @@ class MyApp extends StatelessWidget {
         GroupDetailsScreen.routeName: (context) => const GroupDetailsScreen(),
         RegisterScreen.routeName: (context) => const RegisterScreen(),
         ResultScreen.routeName: (context) => const ResultScreen(),
-        ProfileScreen.routeName: (context) =>  ProfileScreen(),
+        ProfileScreen.routeName: (context) => const ProfileScreen(),
         NewsScreen.routeName: (context) => const NewsScreen(),
         MainScreen.routeName: (context) => const MainScreen(),
         ImportantNewsDetailsScreen.routeName: (context) =>
